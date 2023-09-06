@@ -10,12 +10,12 @@ namespace _XADREZ.tabuleiro
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; set; }
-        public int QntMovimentos { get; set; }
-        public Tabuleiro tabuleiro { get; set; }
+        public int QntMovimentos { get; protected set; }
+        public Tabuleiro tabuleiro { get; protected set; }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tabuleiro)
+        public Peca( Cor cor, Tabuleiro tabuleiro)
         {
-            Posicao = posicao;
+            Posicao = null;
             Cor = cor;
             this.tabuleiro = tabuleiro;
             QntMovimentos = 0;

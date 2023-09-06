@@ -23,5 +23,10 @@ namespace _XADREZ.tabuleiro
             return pecas[l, c];
         }
 
+        public void colocarPeca(Peca p, Posicao pos)
+        {
+            pecas[pos.Linha, pos.Coluna] = p;
+            p.Posicao = pos;
+        }
     }
 }
