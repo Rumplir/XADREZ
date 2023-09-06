@@ -7,13 +7,19 @@ namespace _XADREZ
     {
         static void Main(string[] args)
         {
-            
-            Tabuleiro tab = new Tabuleiro(8,8);
+            try
+            {
+                Tabuleiro tab = new Tabuleiro(8, 8);
 
-            tab.colocarPeca(new Rei(Cor.Black, tab), new Posicao(0, 0));
-            tab.colocarPeca(new Rei(Cor.Black, tab), new Posicao(5, 4));
-            Tela.ImprimirTabuleiro(tab); 
-
+                tab.colocarPeca(new Rei(Cor.Black, tab), new Posicao(0, 0));
+                tab.colocarPeca(new Rei(Cor.Black, tab), new Posicao(5, 4));
+                tab.colocarPeca(new Rei(Cor.Black, tab), new Posicao(7, 4));
+                Tela.ImprimirTabuleiro(tab);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
