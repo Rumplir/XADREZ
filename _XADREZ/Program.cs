@@ -7,6 +7,10 @@ namespace _XADREZ
     {
         static void Main(string[] args)
         {
+            PosicaoXadrez a = new PosicaoXadrez('c', 7);
+
+            Console.WriteLine(a);
+            Console.WriteLine(a.toPosicao());
             try
             {
                 Tabuleiro tab = new Tabuleiro(8, 8);
