@@ -1,4 +1,5 @@
 ﻿using _XADREZ.tabuleiro;
+using _XADREZ.xadrez;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,14 @@ namespace _XADREZ
             }
             Console.WriteLine("  A B C D E F G H");
 
+        }
+
+        public static PosicaoXadrez lerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(coluna, linha);
         }
 
         public static void imprimirPeca(Peca peca)

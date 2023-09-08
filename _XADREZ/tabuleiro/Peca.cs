@@ -20,5 +20,10 @@ namespace _XADREZ.tabuleiro
             this.tabuleiro = tabuleiro;
             QntMovimentos = 0;
         }
+        
+        public void incrementarQntMovimentos()
+        {
+            QntMovimentos++;
+        }
     }
 }
