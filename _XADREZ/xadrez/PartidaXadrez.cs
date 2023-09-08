@@ -28,6 +28,7 @@ namespace _XADREZ.xadrez
             Peca p = Tab.retirarPeca(origem);
             p.incrementarQntMovimentos();
             Peca pecaCapturada = Tab.retirarPeca(destino);
+
             Tab.colocarPeca(p, destino);
         }
         public void colocarPecas()
@@ -35,6 +36,7 @@ namespace _XADREZ.xadrez
 
             Tab.colocarPeca(new Rei(Cor.White, Tab), new PosicaoXadrez('c', 1).toPosicao());
             Tab.colocarPeca(new Rei(Cor.Black, Tab), new PosicaoXadrez('c', 8).toPosicao());
+            Tab.colocarPeca(new Torre(Cor.White, Tab), new PosicaoXadrez('d', 1).toPosicao());
             
         }
     }
